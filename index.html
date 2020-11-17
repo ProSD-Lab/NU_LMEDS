@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>LMEDS 2</title>
+
+    <!-- Angular Material -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css">
+
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- custom CSS file -->
+		<link rel="stylesheet" href="css/custom.css">
+
+    <!-- blockUI CSS -->
+    <link rel="stylesheet" href="css/angular-block-ui.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans" rel="stylesheet">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-app="lmeds2App" layout="row">
+    <!-- states -->
+		<div ng-view autoscroll="true" layout="row" flex>
+      <!-- states load here -->
+    </div>
+
+
+    <!-- angularjs -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+		<!--angular router -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-route.min.js"></script>
+    <!--ng animate -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-animate.min.js"></script>
+    <!--ng aria -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-aria.min.js"></script>
+    <!--ng messages -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-messages.min.js"></script>
+    <!-- ng-sanitize -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-sanitize.min.js"></script>
+
+    <!--angular material -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.js"></script>
+
+    <!-- block UI -->
+    <script type="text/javascript" src="js/vendor/angular-block-ui.min.js"></script>
+
+    <!-- angular fire -->
+    <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <!-- soundjs and preloadjs-->
+    <!--<script type="text/javascript" src="js/vendor/soundjs.js"></script>-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SoundJS/1.0.1/soundjs.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO",
+    authDomain: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO",
+    databaseURL: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO",
+    projectId: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO",
+    storageBucket: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO",
+    messagingSenderId: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO",
+    appId: "REPLACE_WITH_YOUR_FIREBASE_ACCOUNT_INFO"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+			(function () {
+			  'use strict';
+
+			  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			    var msViewportStyle = document.createElement('style')
+			    msViewportStyle.appendChild(
+			      document.createTextNode(
+			        '@-ms-viewport{width:auto!important}'
+			      )
+			    )
+			    document.querySelector('head').appendChild(msViewportStyle)
+			  }
+
+			})();
+		</script>
+
+    <!-- app js files -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/states/preview/preview.controller.js"></script>
+    <script type="text/javascript" src="js/states/consent/consent.controller.js"></script>
+    <script type="text/javascript" src="js/states/instructions/instructions.controller.js"></script>
+    <script type="text/javascript" src="js/states/survey/survey.controller.js"></script>
+    <script type="text/javascript" src="js/states/markup/markup.controller.js"></script>
+    <script type="text/javascript" src="js/states/markup/services/playsCounter.service.js"></script>
+    <script type="text/javascript" src="js/states/markup/services/parameters.service.js"></script>
+    <script type="text/javascript" src="js/states/markup/services/list.service.js"></script>
+    <script type="text/javascript" src="js/states/markup/services/preloadAudio.service.js"></script>
+    <script type="text/javascript" src="js/states/markup/services/validation.service.js"></script>
+    <script type="text/javascript" src="js/states/markup/directives/lmedsBtn.directive.js"></script>
+    <script type="text/javascript" src="js/states/end/end.controller.js"></script>
+    <script type="text/javascript" src="js/common/participantId.service.js"></script>
+  </body>
+</html>

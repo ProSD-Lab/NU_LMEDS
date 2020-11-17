@@ -1,0 +1,23 @@
+[
+  {
+		"audio": "smr_female_phrase1",
+		"text": "However don’t actually go onto the Johnson Expressway",
+  		"context":"If you want to go to Gina’s Pizza Shop, I can tell you the best way to get there. Go straight down this street and follow the signs for the Johnson Expressway."		
+
+	},
+	{
+		"audio": "smr_female_phrase2",
+		"text": "church with a yellow door and a church with a blue steeple",
+		"context":"When you get to the on-ramp, take a left onto Cleveland Street, the main street in town. You’ll go past a big school called Cleveland High School, right between a"
+	},
+	{
+		"audio": "smr_female_phrase3",
+		"text": "Eventually the road will split in two",
+		"context": "There is a small alley just past the church with the blue steeple. Take this alley for several blocks, and turn left on the third road you come to."
+	},
+	{
+		"audio": "smr_female_phrase4",
+		"text": "also known as the best pizza place in town",
+		"context": "Take Fillmore Boulevard, which is the one on the right. A block and a half later you’ll see the sign for Gina’s Pizza Shop,"
+	}	
+]

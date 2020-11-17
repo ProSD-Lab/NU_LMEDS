@@ -1,0 +1,48 @@
+<md-content layout="column" flex>
+	<div>
+		<div layout="column" style="min-height:120px;" md-whiteframe="1">
+			<div layout-margin>
+				<div layout="row" flex layout-align="center center" class="instructions" style="font-size:18px">
+					<p style="margin-top:0px" ng-bind-html='markupCtrl.currentItem.instructions'></p>
+				</div>
+				<div layout="row" layout-margin flex layout-align="center center" class="context">
+					<p ng-bind-html='markupCtrl.currentItem.context'></p>
+				</div>
+				<div layout="row" layout-margin flex layout-align="center center">
+					<md-button class="md-raised md-primary md-hue-2" ng-click="markupCtrl.playSound()" ng-disabled="markupCtrl.validationService.maxedOutPlays == true || markupCtrl.isPlaying == true">Click to Play <md-icon>play_circle_filled</md-icon></md-button>
+				</div>
+
+				<div class="inline-block-center">
+					{{markupCtrl.currentItemService.words}}
+					<span ng-repeat="word in markupCtrl.currentItem.words">
+						<div class="inline-block-center-item" ng-if="word.word!='<br>'">
+							<lmeds-btn mode="markupCtrl.currentItem.mode" sticky="markupCtrl.currentItem.sticky" word="word.word" prominence="word.prominence" boundary="word.boundary" click="markupCtrl.wordClicked()"></lmeds-btn>
+						</div>
+						<span ng-if="item.word=='<br>'"><br /></span>
+					</span>
+				</div>
+
+				<div layout="column" layout-align="start center" flex>
+					<md-checkbox ng-disabled="markupCtrl.validationService.playsFulfilled == false || markupCtrl.isPlaying == true" ng-model="markupCtrl.noMarkupsModel" aria-label="no markups heard" ng-change="markupCtrl.validationService.noMarkupsClicked(markupCtrl.noMarkupsModel);markupCtrl.clearMarkups()">
+						{{markupCtrl.currentItem.checkboxInstructions}}
+					</md-checkbox>
+				</div>
+			</div>
+
+			<span flex></span>
+
+			<md-progress-linear md-mode="determinate" value="{{markupCtrl.progressPercent}}"></md-progress-linear>
+		</div>
+
+		<div layout="column" layout-margin flex layout-align="center center">
+			<md-button class="md-raised md-primary md-hue-2" ng-click="markupCtrl.nextClicked()" ng-disabled="markupCtrl.validationService.markupsFulfilled == false || markupCtrl.validationService.playsFulfilled == false || markupCtrl.isPlaying == true">Next <md-icon>arrow_forward</md-icon></md-button>
+			<p style="margin-top:0px">{{markupCtrl.progressCounter}}</p>
+		</div>
+
+
+
+
+
+	</div>
+
+</md-content>

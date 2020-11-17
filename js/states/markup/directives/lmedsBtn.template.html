@@ -1,0 +1,5 @@
+<div layout="row" layout-align="center center">
+	<md-button class="md-hue-2 lmeds-button" ng-class="{'md-accent md-raised':lmedsBtnCtrl.prominence == true && lmedsBtnCtrl.forceHideProminence == false}"
+	ng-click="lmedsBtnCtrl.btnClicked()">{{lmedsBtnCtrl.word}}</md-button>
+	<div class="vl" ng-class="{'vl-hidden':lmedsBtnCtrl.boundary == false || lmedsBtnCtrl.forceHideBoundary == true}"></div
+</div>

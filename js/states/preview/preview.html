@@ -1,0 +1,24 @@
+<md-content layout="column" flex>
+
+	<div layout="column" md-whiteframe="1" layout-margin layout-align="start center">
+		<p style="padding-top:10px">
+			In this experiment you will listen to audio recordings of speech. You will be asked to mark one or more features in the transcription of the speech recordings.
+		</p>
+		<p>
+			To ensure that your browser supports audio playback, please click the button below. If you do not hear any audio, please contact the experimenter.
+		</p>
+		<md-button class="md-primary md-raised md-hue-2" ng-click="previewCtrl.playTestAudio()" ng-disabled="previewCtrl.soundAvailable==false">
+			<span ng-show="previewCtrl.isPlaying==false">Play Test Sound <md-icon>play_arrow</md-icon></span>
+			<span ng-show="previewCtrl.isPlaying==true">Stop Test Sound <md-icon>stop</md-icon></span>
+
+		</md-button>
+		<p>
+			Do you hear audio?
+		</p>
+		<div layout="row" layout-align="start center">
+			<md-button class="md-primary md-raised md-hue-2" ng-click="previewCtrl.yes()" ng-disabled="previewCtrl.soundPlayed==false">Yes<md-icon>check</md-icon></md-button>
+			<md-button class="md-warn md-raised md-hue-2" ng-click="previewCtrl.no()" ng-disabled="previewCtrl.soundPlayed==false">No <md-icon>close</md-icon></md-button>
+		</div>
+	</div>
+
+</md-content>

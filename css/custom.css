@@ -1,0 +1,78 @@
+.top-buffer {
+	margin-top:10px;
+}
+
+.bottom-buffer {
+	margin-bottom:10px;
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.context {
+	font-size: 1.6em;
+	text-align: center;
+}
+
+.instructions {
+	text-align: center;
+}
+
+.vl {
+    border-left: 4px solid green;
+		margin:0px;
+		padding:0px;
+    height: 40px;
+}
+
+.vl-hidden {
+		opacity: 0;
+    border-left: 4px solid;
+		margin:0px;
+		padding:0px;
+    height: 40px;
+}
+
+.lmeds-button {
+	text-transform: lowercase;
+	font-size: 1.8em;
+	padding-right: 2px;
+	padding-left: 2px;
+	margin-right: 4px;
+	margin-left: 4px;
+	min-width: 0px;;
+}
+
+.stim-word-button {
+	text-transform: lowercase;
+	font-size: 1.8em;
+	padding:2px 5px 2px 2px;
+	margin:5px;
+	min-width: 5px;
+}
+
+.boundary-active {
+	border-right: 3px solid #e67300;
+
+}
+
+.boundary-hidden {
+	margin-right: 8px;
+}
+
+.inline-block-center {
+  text-align: center;
+}
+
+.inline-block-center-item {
+  display: inline-block;
+  text-align: left;
+}

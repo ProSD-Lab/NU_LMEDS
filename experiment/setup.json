@@ -1,0 +1,20 @@
+{
+	"presentationOrder":["boundary", "prominence"],
+	"sticky":true,
+	"list":"list.json",
+	"shuffle":false,
+	"boundary": {
+		"instructions":"Please play sound, then mark <strong><u>boundaries<\/u><\/strong><br\/>In normal speech, speakers group words in a way that helps listeners interpret the utterance. Break the text into chunks that reflect this grouping",
+		"checkboxInstructions": "No boundaries heard",
+		"minPlays":1,
+		"maxPlays":3,
+		"minMarkups":1
+	},
+	"prominence": {
+		"instructions": "Please play sound, then mark <strong><u>prominent words<\/u><\/strong><br\/> In normal speech, speakers pronounce some words with more prominence than others to highlight this word for the listener. Mark words that you hear as prominent in this way.",
+		"checkboxInstructions": "No prominent words heard",
+		"minPlays":1,
+		"maxPlays":3,
+		"minMarkups":1
+	}
+}

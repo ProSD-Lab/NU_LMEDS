@@ -1,0 +1,6 @@
+<md-content layout="column" flex layout-padding>
+	<div ng-include="instructionsCtrl.instructionsPath" onload="instructionsCtrl.instructionsLoaded()"></div>
+	<div layout="row" layout-align="center center" ng-if="instructionsCtrl.ready == true">
+		<md-button class="md-raised md-primary md-hue-2" ng-click="instructionsCtrl.next()">Next</md-button>
+	</div>
+</md-content>

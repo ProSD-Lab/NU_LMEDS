@@ -1,0 +1,7 @@
+<md-content layout="column" flex layout-padding>
+	<div class="consent-form" ng-include="consentCtrl.consentPath" onload="consentCtrl.consentLoaded()"></div>
+	<div layout="row" layout-align="center center" ng-if="consentCtrl.ready == true">
+		<md-button class="md-raised md-primary md-hue-2" ng-click="consentCtrl.accept()">I Agree</md-button>
+		<md-button class="md-raised md-warn md-hue-2" ng-click="consentCtrl.decline()">Decline</md-button>
+	</div>
+</md-content>
