@@ -11,5 +11,5 @@ Installation instructions can be found [here](docs/NU_LMEDS_instructions.pdf).
 
 ## Stimuli Setup
 The experiment setup and stimuli items can modified by editing the list.json and setup.json files in the /experiment folder.
-- [list.json](docs/list_documentation.pdf)
-- [setup.json](docs/setup_documentation)
+- [list.pdf](docs/list_documentation.pdf)
+- [setup.pdf](docs/setup_documentation.pdf)
